@@ -294,6 +294,7 @@ html.nobuild .tl-row{opacity:1}
 .pill{position:relative;display:inline-flex;align-items:center;min-height:46px;padding:10px 20px;border:2px solid #0a0b0e;border-radius:999px;font-weight:600;font-size:clamp(14px,1.05vw,16px);text-decoration:none;overflow:hidden;color:#0a0b0e;transition:color .25s}
 .pill i{position:absolute;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#0a0b0e;transform:scale(0);transition:transform .5s var(--soft)}
 .pill span{position:relative}
+.pill svg{position:relative;flex:none;width:16px;height:16px;margin-right:9px;display:block}
 .pill:hover{color:#fff}
 .pill:hover i{transform:scale(90)}
 .foot-bottom{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;padding:0 var(--gutter);font-size:14px;font-weight:500}
@@ -334,11 +335,29 @@ html.nobuild .tl-row{opacity:1}
 .m-title{font:400 clamp(34px,4vw,54px)/1.08 Anton,sans-serif;text-transform:uppercase;color:var(--text);padding-right:38px;margin-bottom:6px}
 .m-sub{margin-bottom:18px}
 .tiles{display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.tile{display:grid;gap:1px;padding:13px 15px;min-height:64px;border:1px solid var(--edge);border-radius:12px;background:#13161e;text-decoration:none;text-align:left;color:var(--text);font-weight:600;overflow-wrap:anywhere;transition:border-color .2s,transform .2s var(--soft)}
-.tile small{font-size:13px;font-weight:500;color:var(--muted)}
-.tile:hover{border-color:var(--red);transform:translateY(-2px)}
+.tile{display:flex;align-items:center;gap:12px;padding:12px 14px;min-height:68px;border:1px solid var(--edge);border-radius:12px;background:#13161e;text-decoration:none;text-align:left;color:var(--text);font-weight:600;font-size:15px;line-height:1.3;overflow-wrap:anywhere;transition:border-color .2s,background .2s,transform .2s var(--soft)}
+.tile-ico{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.06);color:var(--text);transition:background .2s,color .2s}
+.tile-ico svg{width:20px;height:20px;display:block}
+.tile-txt{display:grid;gap:1px;min-width:0;flex:1}
+.tile small{font-size:12.5px;font-weight:500;color:var(--muted)}
+.tile-go{flex:none;color:var(--muted);transition:transform .2s var(--soft),color .2s}
+.tile-go svg{width:18px;height:18px;display:block}
+.tile:hover{border-color:var(--red);background:#171a23;transform:translateY(-2px)}
+.tile:hover .tile-ico{background:var(--red);color:#fff}
+.tile:hover .tile-go{color:var(--red);transform:translate(2px,-2px)}
+.tile:focus-visible{outline:2px solid var(--red);outline-offset:2px}
+.tile.wa .tile-ico{color:#25d366}
+.tile.wa:hover{border-color:#25d366}
+.tile.wa:hover .tile-ico{background:#25d366;color:#0a0b0e}
+.tile.wa:hover .tile-go{color:#25d366}
+.tile.wide{grid-column:1/-1}
 .tile.primary{grid-column:1/-1;background:var(--red-btn);border-color:var(--red-btn);color:#fff}
 .tile.primary small{color:#ffe0e4}
+.tile.primary .tile-ico{background:rgba(255,255,255,.16);color:#fff}
+.tile.primary .tile-go{color:#ffe0e4}
+.tile.primary:hover{background:#b9142a;border-color:#b9142a}
+.tile.primary:hover .tile-ico{background:#fff;color:var(--red-btn)}
+.tile.primary:hover .tile-go{color:#fff}
 .form{display:grid;gap:13px}
 .field{display:grid;gap:4px;font-size:14px;font-weight:500;color:var(--muted)}
 .field input,.field textarea{width:100%;padding:11px 13px;border:1px solid var(--edge);border-radius:8px;background:#13161e;color:var(--text);font:400 16px/1.4 "Inter Tight",sans-serif}
