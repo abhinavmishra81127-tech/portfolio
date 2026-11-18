@@ -26,11 +26,8 @@
   var bot = /bot|crawl|spider|slurp|lighthouse|pagespeed|facebookexternalhit|embedly|preview/i.test(navigator.userAgent);
   var still = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
   d.classList.add('js');
-  if (bot || still || /[?&]nobuild/.test(location.search)) { d.classList.add('nobuild'); return; }
-  d.classList.add('building');
-  setTimeout(function () {
-    if (!window.__buildStarted) { d.classList.remove('building'); d.classList.add('nobuild'); }
-  }, 4000);
+  /* Intro "AM" build animation disabled: page shows immediately. */
+  d.classList.add('nobuild');
 })();
 </script>
 <link rel="preload" href="assets/fonts/anton.woff2" as="font" type="font/woff2" crossorigin>
@@ -63,6 +60,7 @@
   <a class="logo" href="#top" data-b="small" aria-label="Abhinav Mishra, back to top">ABHINAV<span>.</span></a>
   <nav aria-label="Sections" data-b="items" data-anim="drop">
     <a href="#work" data-nav="work">Work</a>
+    <a href="#paid" data-nav="paid">Paid</a>
     <a href="#timeline" data-nav="timeline">Timeline</a>
     <a href="#results" data-nav="results">Results</a>
     <a href="#method" data-nav="method">Method</a>
@@ -391,6 +389,32 @@
       </div>
     </article>
 
+  </div>
+</section>
+
+<!-- PAID -->
+<section class="section also paid" id="paid" aria-labelledby="paid-h">
+  <div class="sec-head" data-job>
+    <p class="label" data-b="text">Paid &amp; channels</p>
+    <h2 class="h-section" id="paid-h" data-b="head">Ads that ran<br><span class="hl">where players are.</span></h2>
+  </div>
+  <div class="also-list">
+    <div class="also-row" data-b="ride" data-ride="row"><h3>Google Ads</h3><p>Search and display campaigns for eligible markets, with keyword research shared with SEO, landing-page alignment and conversion tracking in GA4.</p><div class="chips"><span>Search</span><span>Display</span><span>Conversion tracking</span></div></div>
+    <div class="also-row" data-b="ride" data-ride="row"><h3>Meta Ads</h3><p>Facebook and Instagram campaigns with creative testing, audience setup and attention to platform policy for restricted categories.</p><div class="chips"><span>Facebook</span><span>Instagram</span><span>Creative testing</span></div></div>
+    <div class="also-row" data-b="ride" data-ride="row"><h3>Telegram</h3><p>Channel and community promotion, paid placements in niche channels and bot-led funnels to move users from community to sign-up.</p><div class="chips"><span>Channel ads</span><span>Community growth</span><span>Funnels</span></div></div>
+    <div class="also-row" data-b="ride" data-ride="row"><h3>X (Twitter) promotion</h3><p>Promoted posts and account-led promotion to build brand reach and drive traffic to campaign pages.</p><div class="chips"><span>Promoted posts</span><span>Brand reach</span></div></div>
+    <div class="also-row" data-b="ride" data-ride="row"><h3>Kick &amp; Twitch streaming</h3><p>Streamer partnerships and sponsored live streams on Kick and Twitch, with tracked links and promo codes for attribution.</p><div class="chips"><span>Kick</span><span>Twitch</span><span>Streamer deals</span><span>Promo codes</span><span>Kick: 2,847 avg CCV</span><span>182K unique viewers</span><span>312 unique chatters</span><span>Peak ~110 avg viewers/day</span></div></div>
+    <div class="also-row" data-b="ride" data-ride="row"><h3>Adult ad networks</h3><p>Banner and native placements on adult traffic networks for 18+ iGaming offers, with geo-targeting and compliance checks per market.</p><div class="chips"><span>18+ traffic</span><span>Native &amp; banner</span><span>Geo-targeting</span></div></div>
+  </div>
+  <div class="paid-proofs">
+  <figure class="paid-proof" data-b="ride" data-ride="row">
+    <img src="assets/images/evidence/kick-stats.webp" width="1552" height="1013" alt="Kick Studio performance over 60 days: average CCV 2,847, peak CCV 5,920, 182,430 unique viewers, 147 streams, 612.4 hours streamed, Verified level" loading="lazy">
+    <figcaption>Kick Studio, last 60 days (Sep 19 to Nov 13, 2026). Average CCV 2,847 (+184%), peak 5,920, 182K unique viewers. Channel reached Verified.</figcaption>
+  </figure>
+  <figure class="paid-proof" data-b="ride" data-ride="row">
+    <img src="assets/images/evidence/twitch-stats.webp" width="1743" height="902" alt="Twitch channel analytics, Sep 11 2025 to Nov 18 2026: daily average viewers rising from about 30 to a peak near 110, 312 unique chatters, 48 follows" loading="lazy">
+    <figcaption>Twitch channel analytics, Sep 2025 to Nov 2026 (434 days). Daily average viewers grew from ~30 to 60–75, with a peak near 110.</figcaption>
+  </figure>
   </div>
 </section>
 

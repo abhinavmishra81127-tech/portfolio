@@ -161,6 +161,12 @@ b{color:var(--text);font-weight:600}
 .also-row:hover{padding-left:16px}
 .also-row:hover::before{transform:none}
 .also-row h3{font-size:clamp(19px,1.5vw,24px);font-weight:600;color:var(--text);margin-bottom:5px;line-height:1.2}
+.also-row .chips{margin-top:10px}
+.paid-proofs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2vw,28px);margin-top:clamp(28px,4vw,48px);align-items:start}
+@media (max-width:900px){.paid-proofs{grid-template-columns:minmax(0,1fr)}}
+.paid-proof{border:1px solid var(--edge);border-radius:12px;overflow:hidden;background:#18181b}
+.paid-proof img{display:block;width:100%;height:auto;opacity:1}
+.paid-proof figcaption{padding:12px 16px;font-size:14px;color:var(--body);border-top:1px solid var(--edge)}
 .ride-on{position:relative;overflow:hidden}
 .ride-on::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(229,35,59,.3),transparent);transform:translateX(-100%);animation:sweep .95s var(--strong) forwards;pointer-events:none}
 @keyframes sweep{to{transform:translateX(100%)}}
