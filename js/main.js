@@ -109,6 +109,13 @@
     sequrity: { i: ['Audience', 'Terminology', 'Technical intent'], c: 'Query map', o: ['Landing pages', 'Explainers', 'Expert review'], cap: 'Positioning plan, reviewed by subject-matter experts.' },
     rise: { i: ['Site crawl', 'Product intent', 'Markets'], c: 'Audit priorities', o: ['Metadata', 'Indexation fixes', 'Internal links'], cap: 'From crawl analysis to prioritized product and category work.' },
     techno: { i: ['Commercial intent', 'US SERPs', 'Technical barriers'], c: 'Aligned pages', o: ['Content + schema', 'Supporting pages', 'Monitoring'], cap: 'Service pages aligned with the searcher\'s task.' },
+    meta: { i: ['Audiences', 'Creatives', 'Policy checks'], c: 'Ad tests', o: ['Facebook', 'Instagram', 'Threads'], cap: 'Creative tests shipped across Meta placements.' },
+    x: { i: ['Partner accounts', 'Launch copy', 'Creative'], c: 'Promoted posts', o: ['Reach', 'Site visits', 'Community'], cap: 'Partner posts that send crypto audiences to the brand.' },
+    telegram: { i: ['Channels', 'Promo codes', 'Bots'], c: 'Community funnel', o: ['Joins', 'Sign-ups', 'Deposits'], cap: 'From channel post to tracked sign-up.' },
+    kick: { i: ['Streamers', 'Tracked links', 'Promo codes'], c: 'Live streams', o: ['Viewers', 'Chat', 'Sign-ups'], cap: 'Sponsored streams with attribution built in.' },
+    twitch: { i: ['Streamers', 'Schedules', 'Promo codes'], c: 'Channel growth', o: ['Viewers', 'Chatters', 'Follows'], cap: 'Steady channel growth tracked over 434 days.' },
+    adult: { i: ['18+ networks', 'Geo targets', 'Compliance'], c: 'Placements', o: ['Native', 'Banners', 'Impressions'], cap: 'Low-cost reach on 18+ traffic networks.' },
+    google: { i: ['Keywords', 'Landing pages', 'GA4 events'], c: 'Campaigns', o: ['Search', 'Display', 'Conversions'], cap: 'Keyword research shared between SEO and paid.' },
   };
   function diagramSvg(d, accent) {
     const ys = [28, 78, 128];

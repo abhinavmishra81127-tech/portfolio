@@ -82,7 +82,7 @@ b{color:var(--text);font-weight:600}
 .slot-tag{position:absolute;left:50%;top:46%;transform:translateX(-50%);padding:4px 10px;border:1px dashed #2f9bff;border-radius:6px;color:#8cc8ff;font:500 13px/1.4 var(--mono);white-space:nowrap;background:rgba(5,6,8,.6)}
 .slot img{opacity:0;transition:opacity .4s}
 .slot img.loaded{opacity:1}
-.hero-text{position:absolute;left:var(--gutter);bottom:clamp(24px,5svh,56px);z-index:3;width:min(44vw,640px);will-change:transform,opacity}
+.hero-text{position:absolute;left:var(--gutter);bottom:clamp(24px,5svh,56px);z-index:3;width:min(44vw,640px,max(340px,calc(50vw - 28svh - var(--gutter) - 16px)));will-change:transform,opacity}
 .greeting{font:400 clamp(28px,2.9vw,48px)/1.1 "Kaushan Script",cursive;color:var(--text);margin-bottom:2px}
 .hero-name{font:400 min(clamp(68px,8.6vw,148px),15.5svh)/1.06 Anton,Impact,sans-serif;text-transform:uppercase;color:var(--text);text-shadow:0 2px 30px rgba(0,0,0,.45)}
 .hero-role{font-size:clamp(21px,2vw,34px);line-height:1.16;font-weight:600;color:var(--red);margin:10px 0 10px}
@@ -116,6 +116,9 @@ b{color:var(--text);font-weight:600}
 .about-note{padding-top:16px;border-top:1px solid var(--edge)}
 
 /* Cards */
+.paid .cards{margin-top:0}
+.screen-g{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;padding:18px}
+.screen-g span{font:400 clamp(22px,2vw,32px)/1 Anton,sans-serif;text-transform:uppercase;color:var(--text);padding:8px 14px;border:1px solid var(--edge);border-radius:6px;background:#13161e}
 .cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,1.3vw,18px)}
 .card{position:relative;display:flex;flex-direction:column;gap:12px;padding:16px 16px 18px;border-radius:17px;border:1px solid var(--edge);background:linear-gradient(165deg,#12151c,#0a0c10 70%);transition:border-color .25s,transform .25s var(--soft);transform-style:preserve-3d;overflow:hidden}
 .card::before{content:"";position:absolute;inset:0 0 auto;height:2px;background:var(--accent)}
@@ -162,12 +165,7 @@ b{color:var(--text);font-weight:600}
 .also-row:hover::before{transform:none}
 .also-row h3{font-size:clamp(19px,1.5vw,24px);font-weight:600;color:var(--text);margin-bottom:5px;line-height:1.2}
 .also-row .chips{margin-top:10px}
-.paid-proofs{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2vw,28px);margin-top:clamp(28px,4vw,48px);align-items:start}
-@media (max-width:900px){.paid-proofs{grid-template-columns:minmax(0,1fr)}}
-.paid-proof{border:1px solid var(--edge);border-radius:12px;overflow:hidden;background:#18181b}
-.paid-proof img{display:block;width:100%;height:auto;opacity:1}
-.paid-proof figcaption{padding:12px 16px;font-size:14px;color:var(--body);border-top:1px solid var(--edge)}
-.ride-on{position:relative;overflow:hidden}
+@media (max-width:1100px){@media (max-width:700px){@media (min-width:1101px){.ride-on{position:relative;overflow:hidden}
 .ride-on::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(229,35,59,.3),transparent);transform:translateX(-100%);animation:sweep .95s var(--strong) forwards;pointer-events:none}
 @keyframes sweep{to{transform:translateX(100%)}}
 
