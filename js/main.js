@@ -522,13 +522,13 @@
     if (t.matches('[data-open-contact]')) contactOptions();
     else if (t.matches('[data-case]')) caseModal(t.dataset.case);
     else if (t.matches('[data-proof]')) {
-      const fig = t.closest('figure'), im = $('img', fig);
+      const ds = t.dataset, fig = ds.src ? null : t.closest('figure'), im = fig && $('img', fig);
       openModal('<h2 class="m-proof-title" id="modalTitle"></h2><p class="m-proof-sub"></p><div class="m-proof-wrap"><img class="m-proof-img" alt=""></div>', true);
       win.classList.add('proof');
-      $('.m-proof-title', body).textContent = $('figcaption b', fig).textContent;
-      $('.m-proof-sub', body).textContent = $('figcaption span', fig).textContent;
+      $('.m-proof-title', body).textContent = fig ? $('figcaption b', fig).textContent : ds.title;
+      $('.m-proof-sub', body).textContent = fig ? $('figcaption span', fig).textContent : ds.sub;
       const big = $('.m-proof-img', body);
-      big.alt = im.alt; big.width = im.getAttribute('width'); big.height = im.getAttribute('height'); big.src = im.getAttribute('src');
+      big.alt = fig ? im.alt : ds.alt; big.width = fig ? im.getAttribute('width') : ds.w; big.height = fig ? im.getAttribute('height') : ds.h; big.src = fig ? im.getAttribute('src') : ds.src;
     }
     else if (t.id === 'toForm') contactForm();
     else if (t.id === 'toOptions') contactOptions();
