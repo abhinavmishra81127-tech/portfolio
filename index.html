@@ -155,7 +155,15 @@
     <div class="about-copy" data-job>
       <p data-b="text">I am an SEO and digital marketing specialist with experience across AI and software development, B2B IT services, legal technology, e-commerce and crypto iGaming. My work combines technical SEO, search strategy, analytics and AI-assisted workflows to solve complex website visibility problems.</p>
       <p data-b="text">I have worked with large gaming catalogs, multilingual URLs, product and service pages, and competitive international search markets. I enjoy working closely with developers and content teams to turn technical findings into practical fixes.</p>
-      <p class="about-note" data-b="text"><b>2.9+ years</b> in digital marketing and SEO, across agency, in-house and freelance work. Based in Jaipur, India.</p>
+      <p class="about-note" data-b="text"><b id="expYears" data-since="2024-01">2.9+ years</b> in digital marketing and SEO, across agency, in-house and freelance work. Based in Jaipur, India.</p>
+      <script>
+      /* Experience counts whole months since the start date, including the current month, so it updates on its own. */
+      (function () {
+        var el = document.getElementById('expYears'), p = el.dataset.since.split('-'), now = new Date();
+        var months = (now.getFullYear() - +p[0]) * 12 + (now.getMonth() + 1 - +p[1]) + 1;
+        if (months > 0) el.textContent = (Math.floor(months / 12 * 10) / 10) + '+ years';
+      })();
+      </script>
     </div>
   </div>
 </section>
