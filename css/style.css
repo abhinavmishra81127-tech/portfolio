@@ -165,6 +165,8 @@ b{color:var(--text);font-weight:600}
 .also-row:hover::before{transform:none}
 .also-row h3{font-size:clamp(19px,1.5vw,24px);font-weight:600;color:var(--text);margin-bottom:5px;line-height:1.2}
 .also-row .chips{margin-top:10px}
+.also-link{display:inline-block;margin-top:10px;font-size:14px;font-weight:600;color:var(--red);text-decoration:none;border-bottom:1px solid transparent;transition:border-color .2s}
+.also-link:hover,.also-link:focus-visible{border-bottom-color:currentColor}
 .ride-on{position:relative;overflow:hidden}
 .ride-on::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(229,35,59,.3),transparent);transform:translateX(-100%);animation:sweep .95s var(--strong) forwards;pointer-events:none}
 @keyframes sweep{to{transform:translateX(100%)}}
